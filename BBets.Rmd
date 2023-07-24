@@ -18,6 +18,46 @@ source(file="BrLw.R")
 ```
 
 
+```{r}
+BrLw <-function(numClass=35,odds=2,countoDo=637){
+days=1:365
+count=countoDo
+repeatn=numClass
+varstor=numeric()
+  brownlow = 0
+  for (i in 1:countoDo) {
+    sam=sample(days,size=numClass,replace = T)
+    y=duplicated(sam)
+    if (sum(y)>0) brownlow=brownlow+1
+    else brownlow = brownlow - odds
+  }
+ return(brownlow)
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
 
 # Introduction
@@ -47,6 +87,36 @@ The function will be given a class_size by number of students, odds, and Number_
 
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
+
+
+
+```{r}
+brownlow <- array(100)
+for (i in 1:100) {
+  brownlow[i] <- BrLw()
+}
+
+```
+
+```{r}
+sorted_brownlow <- sort(brownlow)
+plot(sorted_brownlow, type = "l", xlab = "Index", ylab = "Value",
+     main = "Line Plot of Brownlow Numerical Vector")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
