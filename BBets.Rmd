@@ -106,6 +106,9 @@ plot(sorted_brownlow, type = "l", xlab = "Index", ylab = "Value",
 
 
 
+```{r}
+favstats(sorted_brownlow)
+```
 
 
 
