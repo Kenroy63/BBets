@@ -111,9 +111,7 @@ favstats(sorted_brownlow)
 ```
 
 
-
-
-
+The average earning BrownLow is making is about 281. 95% confidence interval is 2 standards-deviations below and 2 standard deviations above the mean. Those numbers are 210 and 350.
 
 
 
